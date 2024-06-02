@@ -7,8 +7,8 @@ public record DadosAtualizacaoRegiaoMonitorada(
         Long id,
         String regiao,
         String praia,
-        int qntdNinhos,
-        int qntdOvos,
+        Integer qntdNinhos,
+        Integer qntdOvos,
         String riscos,
         String especie,
         String usuarioLogin

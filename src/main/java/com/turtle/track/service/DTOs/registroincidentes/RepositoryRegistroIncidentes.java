@@ -6,6 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RepositoryRegistroIncidentes extends JpaRepository<RegistroIncidentes, Id> {
+public interface RepositoryRegistroIncidentes extends JpaRepository<RegistroIncidentes, Long> {
     Page<RegistroIncidentes> findAll(Pageable paginacao);
 }

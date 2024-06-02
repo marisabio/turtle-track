@@ -63,7 +63,7 @@ public class UsuarioController {
 
     @DeleteMapping(path = "/{login}")
     @Transactional
-    @Operation(summary = "Excluir usuário", description = "Endpoint da exclusão de um único usuário cadastrado.")
+    @Operation(summary = "Excluir usuário", description = "Endpoint da exclusão de um único usuário.")
     public ResponseEntity<String> excluir(@PathVariable String login) {
         var cliente = repositoryUsuario.findById(login)
                 .orElseThrow(() -> new ResourceNotFoundException("Usuário não encontrado com o Id :: " + login));

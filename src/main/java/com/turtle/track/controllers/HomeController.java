@@ -9,6 +9,6 @@ public class HomeController {
     @GetMapping({"/home", "/"})
     public String home() {
 
-        return "home"; // be same as the template file name (without suffix)
+        return "home";
     }
 }

@@ -16,14 +16,12 @@ import org.springframework.security.web.SecurityFilterChain;
 public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain habilitarSecurityFilterChain(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests((requests) ->  // spring security bloqueia todos as paginas e endpoints
-                        requests.requestMatchers("/","/home") //libera para usuarios nao logas / e /home
-                                .permitAll().anyRequest().authenticated()) //demais paginas e endpoints precisam estar logads
+        http.authorizeHttpRequests((requests) ->
+                        requests.requestMatchers("/","/home").permitAll().anyRequest().authenticated())
                 .formLogin((form) ->
                         form.loginPage("/login").permitAll()
                 )
-                .logout((logout) ->
-                        logout.permitAll());
+                .logout(LogoutConfigurer::permitAll);
 
         return http.build();
     }
@@ -33,7 +31,6 @@ public class WebSecurityConfig {
         UserDetails user = User.withDefaultPasswordEncoder()
                 .username("user")
                 .password("password")
-                .roles("USER")
                 .build();
         return new InMemoryUserDetailsManager(user);
     }

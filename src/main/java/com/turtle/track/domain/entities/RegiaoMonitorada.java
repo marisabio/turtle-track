@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
@@ -23,24 +22,24 @@ public class RegiaoMonitorada {
 
     private String regiao;
     private String praia;
-    private Integer qntdNinhos;
-    private Integer qntdOvos;
+    private int qntd_ninhos;
+    private int qntd_ovos;
     private String riscos;
     private String especie;
 
     @OneToOne(targetEntity = Usuario.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "login")
-    private String usuarioLogin;
+    private String usuario_login;
 
     public RegiaoMonitorada(DadosCadastroRegiaoMonitorada dados) {
         this.id = dados.id();
         this.regiao = dados.regiao();
         this.praia = dados.praia();
-        this.qntdNinhos = dados.qntdNinhos();
-        this.qntdOvos = dados.qntdOvos();
+        this.qntd_ninhos = dados.qntd_ninhos();
+        this.qntd_ovos = dados.qntd_ovos();
         this.riscos = dados.riscos();
         this.especie = dados.especie();
-        this.usuarioLogin = dados.usuarioLogin();
+        this.usuario_login = dados.usuario_login();
     }
 
     public void atualizarInformacoes(DadosAtualizacaoRegiaoMonitorada dados) {
@@ -53,11 +52,11 @@ public class RegiaoMonitorada {
         if (dados.praia() != null) {
             this.praia = dados.praia();
         }
-        if (dados.qntdNinhos() != null) {
-            this.qntdNinhos = dados.qntdNinhos();
+        if (dados.qntd_ninhos() != 0) {
+            this.qntd_ninhos = dados.qntd_ninhos();
         }
-        if (dados.qntdOvos() != null) {
-            this.qntdOvos = dados.qntdOvos();
+        if (dados.qntd_ovos() != 0) {
+            this.qntd_ovos = dados.qntd_ovos();
         }
         if (dados.riscos() != null) {
             this.riscos = dados.riscos();
@@ -65,8 +64,8 @@ public class RegiaoMonitorada {
         if (dados.especie() != null) {
             this.especie = dados.especie();
         }
-        if (dados.usuarioLogin() != null) {
-            this.usuarioLogin = dados.usuarioLogin();
+        if (dados.usuario_login() != null) {
+            this.usuario_login = dados.usuario_login();
         }
     }
 

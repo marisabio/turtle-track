@@ -14,8 +14,8 @@ public record DadosCadastroRegistroIncidentes(
         @NotBlank
         String descricao,
         @NotBlank
-        String usuarioLogin,
+        String usuario_login,
         @NotBlank
-        Long regiaoMonitoradaId
+        Long regiao_monitorada_id
         ) {
 }

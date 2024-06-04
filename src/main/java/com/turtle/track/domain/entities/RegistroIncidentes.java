@@ -11,11 +11,10 @@ import lombok.ToString;
 import java.util.Date;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "registros_incidentes")
+@Table(name = "registro_incidentes")
 public class RegistroIncidentes {
 
     @Id
@@ -28,19 +27,19 @@ public class RegistroIncidentes {
 
     @OneToOne(targetEntity = Usuario.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "login")
-    private String usuarioLogin;
+    private String usuario_login;
 
     @OneToOne(targetEntity = RegiaoMonitorada.class, fetch = FetchType.EAGER)
     @JoinColumn(name = "id")
-    private Long regiaoMonitoradaId;
+    private Long regiao_monitorada_id;
 
     public RegistroIncidentes(DadosCadastroRegistroIncidentes dados) {
         this.id = dados.id();
         this.data = dados.data();
         this.especie = dados.especie();
         this.descricao = dados.descricao();
-        this.usuarioLogin = dados.usuarioLogin();
-        this.regiaoMonitoradaId = dados.regiaoMonitoradaId();
+        this.usuario_login = dados.usuario_login();
+        this.regiao_monitorada_id = dados.regiao_monitorada_id();
     }
 
     public void atualizarInformacoes(DadosAtualizacaoRegistroIncidentes dados) {
@@ -56,11 +55,11 @@ public class RegistroIncidentes {
         if (dados.descricao() != null) {
             this.descricao = dados.descricao();
         }
-        if (dados.usuarioLogin() != null) {
-            this.usuarioLogin = dados.usuarioLogin();
+        if (dados.usuario_login() != null) {
+            this.usuario_login = dados.usuario_login();
         }
-        if (dados.regiaoMonitoradaId() != null) {
-            this.regiaoMonitoradaId = dados.regiaoMonitoradaId();
+        if (dados.regiao_monitorada_id() != null) {
+            this.regiao_monitorada_id = dados.regiao_monitorada_id();
         }
     }
 

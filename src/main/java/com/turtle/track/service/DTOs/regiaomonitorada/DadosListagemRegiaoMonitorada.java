@@ -6,15 +6,15 @@ public record DadosListagemRegiaoMonitorada(
         Long id,
         String regiao,
         String praia,
-        Integer qntdNinhos,
-        Integer qntdOvos,
+        int qntd_ninhos,
+        int qntd_ovos,
         String riscos,
         String especie,
-        String usuarioLogin
+        String usuario_login
         ) {
 
         public DadosListagemRegiaoMonitorada(RegiaoMonitorada regiaoMonitorada) {
-            this(regiaoMonitorada.getId(), regiaoMonitorada.getRegiao(), regiaoMonitorada.getPraia(), regiaoMonitorada.getQntdNinhos(), regiaoMonitorada.getQntdOvos(),
-                    regiaoMonitorada.getRiscos(), regiaoMonitorada.getEspecie(), regiaoMonitorada.getUsuarioLogin());
+            this(regiaoMonitorada.getId(), regiaoMonitorada.getRegiao(), regiaoMonitorada.getPraia(), regiaoMonitorada.getQntd_ninhos(), regiaoMonitorada.getQntd_ovos(),
+                    regiaoMonitorada.getRiscos(), regiaoMonitorada.getEspecie(), regiaoMonitorada.getUsuario_login());
         }
 }

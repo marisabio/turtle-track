@@ -9,12 +9,12 @@ public record DadosListagemRegistroIncidentes(
         Date data,
         String especie,
         String descricao,
-        String usuarioLogin,
-        Long regiaoMonitoradaId
+        String usuario_login,
+        Long regiao_monitorada_id
         ) {
 
         public DadosListagemRegistroIncidentes(RegistroIncidentes registroIncidentes) {
             this(registroIncidentes.getId(), registroIncidentes.getData(), registroIncidentes.getEspecie(), registroIncidentes.getDescricao(),
-                    registroIncidentes.getUsuarioLogin(), registroIncidentes.getRegiaoMonitoradaId());
+                    registroIncidentes.getUsuario_login(), registroIncidentes.getRegiao_monitorada_id());
         }
 }

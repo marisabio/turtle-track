@@ -10,7 +10,7 @@ public record DadosAtualizacaoRegistroIncidentes(
         Date data,
         String especie,
         String descricao,
-        String usuarioLogin,
-        Long regiaoMonitoradaId
+        String usuario_login,
+        Long regiao_monitorada_id
         ) {
 }

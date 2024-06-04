@@ -10,13 +10,13 @@ public record DadosCadastroRegiaoMonitorada(
         @NotBlank
         String praia,
         @NotBlank
-        Integer qntdNinhos,
+        int qntd_ninhos,
         @NotBlank
-        Integer qntdOvos,
+        int qntd_ovos,
         @NotBlank
         String riscos,
         @NotBlank
         String especie,
         @NotBlank
-        String usuarioLogin) {
+        String usuario_login) {
 }

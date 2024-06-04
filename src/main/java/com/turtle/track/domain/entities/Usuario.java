@@ -10,7 +10,6 @@ import com.turtle.track.service.DTOs.usuario.DadosAtualizacaoUsuario;
 import com.turtle.track.service.DTOs.usuario.DadosCadastroUsuario;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity

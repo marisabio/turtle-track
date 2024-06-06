@@ -50,7 +50,7 @@ public class Usuario {
 
     public String encode(String senha) {
         BCryptPasswordEncoder bCryptPasswordEncoder =
-                new BCryptPasswordEncoder(10, new SecureRandom());
+                new BCryptPasswordEncoder(5, new SecureRandom());
         return bCryptPasswordEncoder.encode(senha);
 
     }

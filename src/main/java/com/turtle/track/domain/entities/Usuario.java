@@ -30,7 +30,7 @@ public class Usuario {
         this.login = dados.login();
         this.nome = dados.nome();
         this.email = dados.email();
-        this.senha = bCryptPasswordEncoder.encode(dados.senha());
+        this.senha = encode(dados.senha());
     }
 
     public void atualizarInformacoes(DadosAtualizacaoUsuario dados) {
@@ -44,14 +44,16 @@ public class Usuario {
             this.email = dados.email();
         }
         if (dados.senha() != null) {
-            this.senha = bCryptPasswordEncoder.encode(dados.senha());
+            this.senha = encode(dados.senha());
         }
     }
 
-    int salt = 10;
-    BCryptPasswordEncoder bCryptPasswordEncoder =
-            new BCryptPasswordEncoder(salt, new SecureRandom());
+    public String encode(String senha) {
+        BCryptPasswordEncoder bCryptPasswordEncoder =
+                new BCryptPasswordEncoder(10, new SecureRandom());
+        return bCryptPasswordEncoder.encode(senha);
 
+    }
 }
 
 

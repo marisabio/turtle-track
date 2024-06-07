@@ -24,7 +24,7 @@ Além disso, também foi realizado um modelo de identificação de espécies de 
 
 ## Instruções
 
-Após clonar o repositório, rodar a classe _Main_ do projeto em sua IDE de preferência ou rodar o _.jar_ compilado com o _maven_ pelo terminal. O deployment principal está sendo feito pelo Deployment Center do Microsoft Azure, direto deste repositório do GitHub.
+Após clonar o repositório, rodar o projeto .NET em sua IDE de preferência ou rodar o .exe para *deployment*.
 
 ## Diagramas
 

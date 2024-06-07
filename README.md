@@ -1,5 +1,7 @@
 # Turtle Track
 
+![Logo](/assets/images/logo.jpg)
+
 JOSÉ CARLOS SILVA - API/Back-end  
 LEONARDO GUIMARÃES MARQUES - Mobile/Front-end  
 MARIA LUIZA GOVEIA - Machine Learning/AI  
